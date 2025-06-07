@@ -23,7 +23,7 @@ gui/theme/custom = res://themes/main_theme.tres
 
 > 当前示例主题采用蓝色为主色调，视觉统一、现代感强。
 
-已支持以下常见 UI 控件（包含默认样式及交互状态）：
+已支持以下常见 UI 控件（包含默认样式及交互状态），在 6 月 7 日的更新后支持几乎所有的主流控件：
 
 * [x] `Panel`
 * [x] `PanelContainer`
@@ -39,10 +39,10 @@ gui/theme/custom = res://themes/main_theme.tres
 * [x] `Button`
 
   * [x] 主按钮 Primary（蓝色主题）
-  * [ ] 次按钮 Secondary（可扩展）
-  * [ ] 成功按钮 Success（可扩展）
-  * [ ] 警告按钮 Warning（可扩展）
-  * [ ] 危险按钮 Danger（可扩展）
+  * [x] 次按钮 Secondary（可扩展）
+  * [x] 成功按钮 Success（可扩展）
+  * [x] 警告按钮 Warning（可扩展）
+  * [x] 危险按钮 Danger（可扩展）
 * [x] `CheckBox` & `RadioButton`
 * [x] `TabContainer`
 * [x] `Tree`

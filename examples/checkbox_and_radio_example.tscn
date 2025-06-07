@@ -1,0 +1,379 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2vpajrq8dbn0"]
+
+[ext_resource type="ButtonGroup" uid="uid://d2br15j607cep" path="res://resources/demo_button_group.tres" id="1_4ikhn"]
+
+[node name="CheckboxAndRadioExample" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CheckBoxLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Check Box and Radios"
+
+[node name="Checkboxes" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="Checkboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Default"
+
+[node name="PrimaryCheckBox" type="CheckBox" parent="Checkboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxPrimary"
+text = "Primary"
+
+[node name="SuccessCheckBox" type="CheckBox" parent="Checkboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxSuccess"
+text = "Success"
+
+[node name="InfoCheckBox" type="CheckBox" parent="Checkboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Info"
+
+[node name="WarningCheckBox" type="CheckBox" parent="Checkboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxWarning"
+text = "Warning"
+
+[node name="DangerCheckBox" type="CheckBox" parent="Checkboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxDanger"
+text = "Danger"
+
+[node name="CheckedCheckboxes" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="CheckedCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+text = "Default"
+
+[node name="PrimaryCheckBox" type="CheckBox" parent="CheckedCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxPrimary"
+button_pressed = true
+text = "Primary"
+
+[node name="SuccessCheckBox" type="CheckBox" parent="CheckedCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxSuccess"
+button_pressed = true
+text = "Success"
+
+[node name="InfoCheckBox" type="CheckBox" parent="CheckedCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+text = "Info"
+
+[node name="WarningCheckBox" type="CheckBox" parent="CheckedCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxWarning"
+button_pressed = true
+text = "Warning"
+
+[node name="DangerCheckBox" type="CheckBox" parent="CheckedCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxDanger"
+button_pressed = true
+text = "Danger"
+
+[node name="DisabledCheckboxes" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="DisabledCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Default"
+
+[node name="PrimaryCheckBox" type="CheckBox" parent="DisabledCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxPrimary"
+disabled = true
+text = "Primary"
+
+[node name="SuccessCheckBox" type="CheckBox" parent="DisabledCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxSuccess"
+disabled = true
+text = "Success"
+
+[node name="InfoCheckBox" type="CheckBox" parent="DisabledCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Info"
+
+[node name="WarningCheckBox" type="CheckBox" parent="DisabledCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxWarning"
+disabled = true
+text = "Warning"
+
+[node name="DangerCheckBox" type="CheckBox" parent="DisabledCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxDanger"
+disabled = true
+text = "Danger"
+
+[node name="DisabledCheckedCheckboxes" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="DisabledCheckedCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+button_pressed = true
+text = "Default"
+
+[node name="PrimaryCheckBox" type="CheckBox" parent="DisabledCheckedCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxPrimary"
+disabled = true
+button_pressed = true
+text = "Primary"
+
+[node name="SuccessCheckBox" type="CheckBox" parent="DisabledCheckedCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxSuccess"
+disabled = true
+button_pressed = true
+text = "Success"
+
+[node name="InfoCheckBox" type="CheckBox" parent="DisabledCheckedCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+button_pressed = true
+text = "Info"
+
+[node name="WarningCheckBox" type="CheckBox" parent="DisabledCheckedCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxWarning"
+disabled = true
+button_pressed = true
+text = "Warning"
+
+[node name="DangerCheckBox" type="CheckBox" parent="DisabledCheckedCheckboxes"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxDanger"
+disabled = true
+button_pressed = true
+text = "Danger"
+
+[node name="Radios" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="Radios"]
+layout_mode = 2
+size_flags_horizontal = 3
+button_group = ExtResource("1_4ikhn")
+text = "Default"
+
+[node name="PrimaryCheckBox" type="CheckBox" parent="Radios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxPrimary"
+button_group = ExtResource("1_4ikhn")
+text = "Primary"
+
+[node name="SuccessCheckBox" type="CheckBox" parent="Radios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxSuccess"
+button_group = ExtResource("1_4ikhn")
+text = "Success"
+
+[node name="InfoCheckBox" type="CheckBox" parent="Radios"]
+layout_mode = 2
+size_flags_horizontal = 3
+button_group = ExtResource("1_4ikhn")
+text = "Info"
+
+[node name="WarningCheckBox" type="CheckBox" parent="Radios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxWarning"
+button_group = ExtResource("1_4ikhn")
+text = "Warning"
+
+[node name="DangerCheckBox" type="CheckBox" parent="Radios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxDanger"
+button_group = ExtResource("1_4ikhn")
+text = "Danger"
+
+[node name="CheckedRadios" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="CheckedRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+button_group = ExtResource("1_4ikhn")
+text = "Default"
+
+[node name="PrimaryCheckBox" type="CheckBox" parent="CheckedRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxPrimary"
+button_pressed = true
+button_group = ExtResource("1_4ikhn")
+text = "Primary"
+
+[node name="SuccessCheckBox" type="CheckBox" parent="CheckedRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxSuccess"
+button_pressed = true
+button_group = ExtResource("1_4ikhn")
+text = "Success"
+
+[node name="InfoCheckBox" type="CheckBox" parent="CheckedRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+button_group = ExtResource("1_4ikhn")
+text = "Info"
+
+[node name="WarningCheckBox" type="CheckBox" parent="CheckedRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxWarning"
+button_pressed = true
+button_group = ExtResource("1_4ikhn")
+text = "Warning"
+
+[node name="DangerCheckBox" type="CheckBox" parent="CheckedRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxDanger"
+button_pressed = true
+button_group = ExtResource("1_4ikhn")
+text = "Danger"
+
+[node name="DisabledRadios" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="DisabledRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+button_group = ExtResource("1_4ikhn")
+text = "Default"
+
+[node name="PrimaryCheckBox" type="CheckBox" parent="DisabledRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxPrimary"
+disabled = true
+button_group = ExtResource("1_4ikhn")
+text = "Primary"
+
+[node name="SuccessCheckBox" type="CheckBox" parent="DisabledRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxSuccess"
+disabled = true
+button_group = ExtResource("1_4ikhn")
+text = "Success"
+
+[node name="InfoCheckBox" type="CheckBox" parent="DisabledRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+button_group = ExtResource("1_4ikhn")
+text = "Info"
+
+[node name="WarningCheckBox" type="CheckBox" parent="DisabledRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxWarning"
+disabled = true
+button_group = ExtResource("1_4ikhn")
+text = "Warning"
+
+[node name="DangerCheckBox" type="CheckBox" parent="DisabledRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxDanger"
+disabled = true
+button_group = ExtResource("1_4ikhn")
+text = "Danger"
+
+[node name="DisabledCheckedRadios" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="DisabledCheckedRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+button_pressed = true
+button_group = ExtResource("1_4ikhn")
+text = "Default"
+
+[node name="PrimaryCheckBox" type="CheckBox" parent="DisabledCheckedRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxPrimary"
+disabled = true
+button_pressed = true
+button_group = ExtResource("1_4ikhn")
+text = "Primary"
+
+[node name="SuccessCheckBox" type="CheckBox" parent="DisabledCheckedRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxSuccess"
+disabled = true
+button_pressed = true
+button_group = ExtResource("1_4ikhn")
+text = "Success"
+
+[node name="InfoCheckBox" type="CheckBox" parent="DisabledCheckedRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+button_pressed = true
+button_group = ExtResource("1_4ikhn")
+text = "Info"
+
+[node name="WarningCheckBox" type="CheckBox" parent="DisabledCheckedRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxWarning"
+disabled = true
+button_pressed = true
+button_group = ExtResource("1_4ikhn")
+text = "Warning"
+
+[node name="DangerCheckBox" type="CheckBox" parent="DisabledCheckedRadios"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxDanger"
+disabled = true
+button_pressed = true
+button_group = ExtResource("1_4ikhn")
+text = "Danger"

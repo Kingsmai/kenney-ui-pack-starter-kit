@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://t0jdaol7tyd7"]
+
+[node name="TabExample" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Tab Container"
+
+[node name="HboxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TabContainer" type="TabContainer" parent="HboxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+current_tab = 0
+
+[node name="Tab 1" type="Control" parent="HboxContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Tab 2" type="Control" parent="HboxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Tab 3" type="Control" parent="HboxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="PrimaryTabContainer" type="TabContainer" parent="HboxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"TabContainerPrimary"
+current_tab = 0
+tab_focus_mode = 0
+
+[node name="Tab 1" type="Control" parent="HboxContainer/PrimaryTabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Tab 2" type="Control" parent="HboxContainer/PrimaryTabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Tab 3" type="Control" parent="HboxContainer/PrimaryTabContainer"]
+visible = false
+layout_mode = 2
+focus_mode = 2
+metadata/_tab_index = 2
+
+[node name="SuccessTabContainer" type="TabContainer" parent="HboxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"TabContainerSuccess"
+current_tab = 0
+tab_focus_mode = 0
+
+[node name="Tab 1" type="Control" parent="HboxContainer/SuccessTabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Tab 2" type="Control" parent="HboxContainer/SuccessTabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Tab 3" type="Control" parent="HboxContainer/SuccessTabContainer"]
+visible = false
+layout_mode = 2
+focus_mode = 2
+metadata/_tab_index = 2
+
+[node name="WarningTabContainer" type="TabContainer" parent="HboxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"TabContainerWarning"
+current_tab = 0
+tab_focus_mode = 0
+
+[node name="Tab 1" type="Control" parent="HboxContainer/WarningTabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Tab 2" type="Control" parent="HboxContainer/WarningTabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Tab 3" type="Control" parent="HboxContainer/WarningTabContainer"]
+visible = false
+layout_mode = 2
+focus_mode = 2
+metadata/_tab_index = 2
+
+[node name="DangerTabContainer" type="TabContainer" parent="HboxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"TabContainerDanger"
+current_tab = 0
+tab_focus_mode = 0
+
+[node name="Tab 1" type="Control" parent="HboxContainer/DangerTabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Tab 2" type="Control" parent="HboxContainer/DangerTabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Tab 3" type="Control" parent="HboxContainer/DangerTabContainer"]
+visible = false
+layout_mode = 2
+focus_mode = 2
+metadata/_tab_index = 2

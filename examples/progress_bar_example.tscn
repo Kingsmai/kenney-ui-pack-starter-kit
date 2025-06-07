@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://dmfdhro22o3no"]
+
+[node name="ProgressBarExample" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Progress Bar"
+
+[node name="DefaultProgressBar" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="DefaultProgressBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ProgressBar2" type="ProgressBar" parent="DefaultProgressBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 50.0
+
+[node name="ProgressBar3" type="ProgressBar" parent="DefaultProgressBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="PrimaryProgressBar" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="PrimaryProgressBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ProgressBarPrimary"
+
+[node name="ProgressBar2" type="ProgressBar" parent="PrimaryProgressBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ProgressBarPrimary"
+value = 50.0
+
+[node name="ProgressBar3" type="ProgressBar" parent="PrimaryProgressBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ProgressBarPrimary"
+value = 100.0
+
+[node name="SuccessProgressBar" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="SuccessProgressBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ProgressBarSuccess"
+
+[node name="ProgressBar2" type="ProgressBar" parent="SuccessProgressBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ProgressBarSuccess"
+value = 50.0
+
+[node name="ProgressBar3" type="ProgressBar" parent="SuccessProgressBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ProgressBarSuccess"
+value = 100.0
+
+[node name="WarningProgressBar" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="WarningProgressBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ProgressBarWarning"
+
+[node name="ProgressBar2" type="ProgressBar" parent="WarningProgressBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ProgressBarWarning"
+value = 50.0
+
+[node name="ProgressBar3" type="ProgressBar" parent="WarningProgressBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ProgressBarWarning"
+value = 100.0
+
+[node name="DangerProgressBar" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="DangerProgressBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ProgressBarDanger"
+
+[node name="ProgressBar2" type="ProgressBar" parent="DangerProgressBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ProgressBarDanger"
+value = 50.0
+
+[node name="ProgressBar3" type="ProgressBar" parent="DangerProgressBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ProgressBarDanger"
+value = 100.0

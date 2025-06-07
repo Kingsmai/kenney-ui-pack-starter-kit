@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://5wuyyms534vi"]
+
+[node name="InputExample" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HSplitContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Inputs"
+
+[node name="DefaultLineEdit" type="LineEdit" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Line Edit"
+clear_button_enabled = true
+
+[node name="PlaceholderLineEdit" type="LineEdit" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "Placeholder"
+
+[node name="DisabledLineEdit" type="LineEdit" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Disabled"
+placeholder_text = "Placeholder"
+editable = false
+
+[node name="SpinBox" type="SpinBox" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextEdit" type="TextEdit" parent="HBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Text Edit"
+placeholder_text = "With Placeholder"
+
+[node name="CodeEdit" type="CodeEdit" parent="HBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "func _ready() -> void:
+	print(\"Hello, world!\")"
+scroll_smooth = true
+minimap_draw = true
+symbol_lookup_on_click = true
+symbol_tooltip_on_hover = true
+line_folding = true
+gutters_draw_breakpoints_gutter = true
+gutters_draw_bookmarks = true
+gutters_draw_executing_lines = true
+gutters_draw_line_numbers = true
+gutters_zero_pad_line_numbers = true
+gutters_draw_fold_gutter = true
+code_completion_enabled = true
+auto_brace_completion_enabled = true

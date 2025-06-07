@@ -1,0 +1,182 @@
+[gd_scene format=3 uid="uid://bh3svcwtqlcm5"]
+
+[node name="CheckButtonExample" type="VBoxContainer"]
+offset_top = 1.0
+offset_right = 40.0
+offset_bottom = 41.0
+
+[node name="CheckButtonLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Check Box and Radios"
+
+[node name="CheckButtons" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="CheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Default"
+
+[node name="PrimaryCheckButton" type="CheckButton" parent="CheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonPrimary"
+text = "Primary"
+
+[node name="SuccessCheckButton" type="CheckButton" parent="CheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonSuccess"
+text = "Success"
+
+[node name="InfoCheckButton" type="CheckButton" parent="CheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Info"
+
+[node name="WarningCheckButton" type="CheckButton" parent="CheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonWarning"
+text = "Warning"
+
+[node name="DangerCheckButton" type="CheckButton" parent="CheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonDanger"
+text = "Danger"
+
+[node name="CheckedCheckButtons" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="CheckedCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+text = "Default"
+
+[node name="PrimaryCheckButton" type="CheckButton" parent="CheckedCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonPrimary"
+button_pressed = true
+text = "Primary"
+
+[node name="SuccessCheckButton" type="CheckButton" parent="CheckedCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonSuccess"
+button_pressed = true
+text = "Success"
+
+[node name="InfoCheckButton" type="CheckButton" parent="CheckedCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+text = "Info"
+
+[node name="WarningCheckButton" type="CheckButton" parent="CheckedCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonWarning"
+button_pressed = true
+text = "Warning"
+
+[node name="DangerCheckButton" type="CheckButton" parent="CheckedCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonDanger"
+button_pressed = true
+text = "Danger"
+
+[node name="DisabledCheckButtons" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="DisabledCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Default"
+
+[node name="PrimaryCheckButton" type="CheckButton" parent="DisabledCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonPrimary"
+disabled = true
+text = "Primary"
+
+[node name="SuccessCheckButton" type="CheckButton" parent="DisabledCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonSuccess"
+disabled = true
+text = "Success"
+
+[node name="InfoCheckButton" type="CheckButton" parent="DisabledCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Info"
+
+[node name="WarningCheckButton" type="CheckButton" parent="DisabledCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonWarning"
+disabled = true
+text = "Warning"
+
+[node name="DangerCheckButton" type="CheckButton" parent="DisabledCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonDanger"
+disabled = true
+text = "Danger"
+
+[node name="DisabledCheckedCheckButtons" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="DisabledCheckedCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+button_pressed = true
+text = "Default"
+
+[node name="PrimaryCheckButton" type="CheckButton" parent="DisabledCheckedCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonPrimary"
+disabled = true
+button_pressed = true
+text = "Primary"
+
+[node name="SuccessCheckButton" type="CheckButton" parent="DisabledCheckedCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonSuccess"
+disabled = true
+button_pressed = true
+text = "Success"
+
+[node name="InfoCheckButton" type="CheckButton" parent="DisabledCheckedCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+button_pressed = true
+text = "Info"
+
+[node name="WarningCheckButton" type="CheckButton" parent="DisabledCheckedCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonWarning"
+disabled = true
+button_pressed = true
+text = "Warning"
+
+[node name="DangerCheckButton" type="CheckButton" parent="DisabledCheckedCheckButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckButtonDanger"
+disabled = true
+button_pressed = true
+text = "Danger"

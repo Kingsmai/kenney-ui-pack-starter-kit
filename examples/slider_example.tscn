@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://yxxaenninynu"]
+
+[node name="SliderExample" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SliderLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Sliders"
+
+[node name="Sliders" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HorizontalSliders" type="VBoxContainer" parent="Sliders"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DefaultHSlider" type="HSlider" parent="Sliders/HorizontalSliders"]
+layout_mode = 2
+value = 50.0
+
+[node name="PrimaryHSlider" type="HSlider" parent="Sliders/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderPrimary"
+value = 50.0
+
+[node name="SuccessHSlider" type="HSlider" parent="Sliders/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderSuccess"
+value = 50.0
+
+[node name="WarningHSlider" type="HSlider" parent="Sliders/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderWarning"
+value = 50.0
+
+[node name="DangerHSlider" type="HSlider" parent="Sliders/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderDanger"
+value = 50.0
+
+[node name="VSeparator" type="VSeparator" parent="Sliders"]
+layout_mode = 2
+
+[node name="VerticalSliders" type="HBoxContainer" parent="Sliders"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DefaultVSlider" type="VSlider" parent="Sliders/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+value = 50.0
+
+[node name="PrimaryVSlider" type="VSlider" parent="Sliders/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderPrimary"
+value = 50.0
+
+[node name="SuccessVSlider" type="VSlider" parent="Sliders/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderSuccess"
+value = 50.0
+
+[node name="WarningVSlider" type="VSlider" parent="Sliders/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderWarning"
+value = 50.0
+
+[node name="DangerVSlider" type="VSlider" parent="Sliders/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderDanger"
+value = 50.0
+
+[node name="DisabledSliders" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HorizontalSliders" type="VBoxContainer" parent="DisabledSliders"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DefaultHSlider" type="HSlider" parent="DisabledSliders/HorizontalSliders"]
+layout_mode = 2
+value = 50.0
+editable = false
+
+[node name="PrimaryHSlider" type="HSlider" parent="DisabledSliders/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderPrimary"
+value = 50.0
+editable = false
+
+[node name="SuccessHSlider" type="HSlider" parent="DisabledSliders/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderSuccess"
+value = 50.0
+editable = false
+
+[node name="WarningHSlider" type="HSlider" parent="DisabledSliders/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderWarning"
+value = 50.0
+editable = false
+
+[node name="DangerHSlider" type="HSlider" parent="DisabledSliders/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderDanger"
+value = 50.0
+editable = false
+
+[node name="VSeparator" type="VSeparator" parent="DisabledSliders"]
+layout_mode = 2
+
+[node name="VerticalSliders" type="HBoxContainer" parent="DisabledSliders"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DefaultVSlider" type="VSlider" parent="DisabledSliders/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+value = 50.0
+editable = false
+
+[node name="PrimaryVSlider" type="VSlider" parent="DisabledSliders/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderPrimary"
+value = 50.0
+editable = false
+
+[node name="SuccessVSlider" type="VSlider" parent="DisabledSliders/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderSuccess"
+value = 50.0
+editable = false
+
+[node name="WarningVSlider" type="VSlider" parent="DisabledSliders/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderWarning"
+value = 50.0
+editable = false
+
+[node name="DangerVSlider" type="VSlider" parent="DisabledSliders/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderDanger"
+value = 50.0
+editable = false

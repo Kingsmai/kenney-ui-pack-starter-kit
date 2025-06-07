@@ -1,0 +1,181 @@
+[gd_scene format=3 uid="uid://cgt4rg5n0jnq5"]
+
+[node name="ButtonsExample" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Buttons"
+
+[node name="ButttonBasicUsageLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Basic Usage"
+
+[node name="Buttons" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="DefaultButton" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Default"
+
+[node name="PrimaryButton" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonPrimary"
+text = "Primary"
+
+[node name="SuccessButton" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonSuccess"
+text = "Success"
+
+[node name="InfoButton" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Info"
+
+[node name="WarningButton" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonWarning"
+text = "Warning"
+
+[node name="DangerButton" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonDanger"
+text = "Danger"
+
+[node name="PlainButtons" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="DefaultButton" type="Button" parent="PlainButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonPlain"
+text = "Plain"
+
+[node name="PrimaryButton" type="Button" parent="PlainButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonPrimaryPlain"
+text = "Primary"
+
+[node name="SuccessButton" type="Button" parent="PlainButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonSuccessPlain"
+text = "Success"
+
+[node name="InfoButton" type="Button" parent="PlainButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonPlain"
+text = "Info"
+
+[node name="WarningButton" type="Button" parent="PlainButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonWarningPlain"
+text = "Warning"
+
+[node name="DangerButton" type="Button" parent="PlainButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonDangerPlain"
+text = "Danger"
+
+[node name="DisabledButtonLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Disabled Buttons"
+
+[node name="DisabledButtons" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="DefaultButton" type="Button" parent="DisabledButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Default"
+
+[node name="PrimaryButton" type="Button" parent="DisabledButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonPrimary"
+disabled = true
+text = "Primary"
+
+[node name="SuccessButton" type="Button" parent="DisabledButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonSuccess"
+disabled = true
+text = "Success"
+
+[node name="InfoButton" type="Button" parent="DisabledButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Info"
+
+[node name="WarningButton" type="Button" parent="DisabledButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonWarning"
+disabled = true
+text = "Warning"
+
+[node name="DangerButton" type="Button" parent="DisabledButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonDanger"
+disabled = true
+text = "Danger"
+
+[node name="DisabledPlainButtons" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="DefaultButton" type="Button" parent="DisabledPlainButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonPlain"
+disabled = true
+text = "Plain"
+
+[node name="PrimaryButton" type="Button" parent="DisabledPlainButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonPrimaryPlain"
+disabled = true
+text = "Primary"
+
+[node name="SuccessButton" type="Button" parent="DisabledPlainButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonSuccessPlain"
+disabled = true
+text = "Success"
+
+[node name="InfoButton" type="Button" parent="DisabledPlainButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonPlain"
+disabled = true
+text = "Info"
+
+[node name="WarningButton" type="Button" parent="DisabledPlainButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonWarningPlain"
+disabled = true
+text = "Warning"
+
+[node name="DangerButton" type="Button" parent="DisabledPlainButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ButtonDangerPlain"
+disabled = true
+text = "Danger"

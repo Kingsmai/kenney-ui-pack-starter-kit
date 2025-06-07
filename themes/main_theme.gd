@@ -3,389 +3,394 @@ extends ProgrammaticTheme
 
 const UPDATE_ON_SAVE = true
 const VERBOSITY = Verbosity.SILENT
-
-const DEFAULT_FONT = "res://assets/Font/Kenney Future Narrow.ttf"
+const THEME_FILE_PATH = "res://themes/main_theme.tres"
 
 const FONT_COLOR = Color("#333333")
 const FONT_UNEDITABLE_COLOR = Color("#333333AA")
 const FONT_PLACEHOLDER_COLOR = Color("#999999")
-const BUTTON_FONT_COLOR = Color("#ffffff")
-
-const CLOSE_BUTTON_ICON = "res://themes/ui-pack/window_control/grey_icon_cross.png"
-const CLOSE_BUTTON_BG = "res://themes/ui-pack/window_control/red_button_square_flat.png"
-const CLOSE_BUTTON_HOVER_BG = "res://themes/ui-pack/window_control/red_button_square_gloss.png"
-const CLOSE_BUTTON_PRESSED_BG = "res://themes/ui-pack/window_control/red_button_square_gradient.png"
-
-const PANEL_BG = "res://themes/ui-pack/panel/panel_square_depth_line.png"
-const PANEL_GREEN_BG = "res://themes/ui-pack/panel/button_square_depth_flat.png"
-
-const BUTTON_BG = "res://themes/ui-pack/primary/button_square_depth_gradient.png"
-const BUTTON_HOVER_BG = "res://themes/ui-pack/primary/button_square_depth_gloss.png"
-const BUTTON_PRESSED_BG = "res://themes/ui-pack/primary/button_square_gradient.png"
-const BUTTON_HOVER_PRESSED_BG = "res://themes/ui-pack/primary/button_square_gloss.png"
-const BUTTON_DISABLED_BG = "res://themes/ui-pack/primary/button_square_line.png"
-
-const CHECKBOX_UNCHECKED_DISABLED = "res://themes/ui-pack/checkboxes/check_square_grey.png"
-const CHECKBOX_UNCHECKED = "res://themes/ui-pack/checkboxes/check_square_color.png"
-const CHECKBOX_CHECKED_DISABLED = "res://themes/ui-pack/checkboxes/check_square_grey_checkmark.png"
-const CHECKBOX_CHECKED = "res://themes/ui-pack/checkboxes/check_square_color_checkmark.png"
-const RADIO_UNCHECKED_DISABLED = "res://themes/ui-pack/checkboxes/check_round_grey.png"
-const RADIO_UNCHECKED = "res://themes/ui-pack/checkboxes/check_round_color.png"
-const RADIO_CHECKED_DISABLED = "res://themes/ui-pack/checkboxes/check_round_round_circle.png"
-const RADIO_CHECKED = "res://themes/ui-pack/checkboxes/check_round_round_circle.png"
-
-const INPUT_BG = "res://themes/ui-pack/input/input_square.png"
-const INPUT_FOCUS_BG = "res://themes/ui-pack/input/input_square.png"
-
-const TAB_PANEL_BG = "res://themes/ui-pack/tab_container/button_square_flat_grey.png"
-const TAB_SELECTED_BG = "res://themes/ui-pack/tab_container/button_square_flat.png"
-const TAB_UNSELECTED_BG = "res://themes/ui-pack/tab_container/button_square_gradient.png"
-const TAB_HOVER_BG = "res://themes/ui-pack/tab_container/button_square_gloss.png"
-const TAB_DISABLED_BG = "res://themes/ui-pack/tab_container/button_square_flat_grey.png"
-
-const TREE_PANEL_BG = "res://themes/ui-pack/tree/button_square_line.png"
-const TREE_ICON_EXPAND = "res://themes/ui-pack/tree/icon_arrow_down_dark.svg"
-const TREE_ICON_COLLAPSE = "res://themes/ui-pack/tree/icon_arrow_up_dark.svg"
-const TREE_SELECTED_BG = "res://themes/ui-pack/tree/button_square_flat.png"
-const TREE_HOVER_BG = "res://themes/ui-pack/tree/button_square_gloss.png"
-const TREE_CHECKBOX_UNCHECKED_DISABLED = "res://themes/ui-pack/tree/check_square_grey.png"
-const TREE_CHECKBOX_UNCHECKED = "res://themes/ui-pack/tree/check_square_color.png"
-const TREE_CHECKBOX_CHECKED_DISABLED = "res://themes/ui-pack/tree/check_square_grey_checkmark.png"
-const TREE_CHECKBOX_CHECKED = "res://themes/ui-pack/tree/check_square_color_checkmark.png"
-
-const PROGRESS_BAR_BG = "res://themes/ui-pack/progress_bar/bar_shadow_round_outline_small.svg"
-const PROGRESS_BAR_FILL = "res://themes/ui-pack/progress_bar/bar_round_gloss_small.svg"
-
-const SCROLL_BAR_BG = "res://themes/ui-pack/scroll_bar/bar_shadow_square_small_square.svg"
-const SCROLL_BAR_GRABBER = "res://themes/ui-pack/scroll_bar/bar_square_small_square.svg"
-const SCROLL_BAR_GRABBER_HIGHLIGHT = "res://themes/ui-pack/scroll_bar/bar_square_gloss_small_square.svg"
+const FONT_COLOR_OUTLINE = Color("#ffffff")
 
 const MARGIN = 8
 
+const UI_PACK_COLOR_PATH = "res://themes/ui_pack/%s/%s.svg"
+const UI_PACK_EXTRA_PATH = "res://themes/ui_pack/extra/%s.svg"
+
+const TYPE_COLORS: Dictionary[String, String] = {
+	"Default": "Grey",
+	"Primary": "Blue",
+	"Success": "Green",
+	#"Info": "Grey",
+	"Warning": "Yellow",
+	"Danger": "Red"
+}
+
+const PANEL_STYLES: Dictionary[String, String] = {
+	"Depth": "button_square_depth_flat",
+	"Flat": "button_square_flat",
+}
+
+const BUTTON_VARIANTS: Dictionary[String, Dictionary] = {
+	"Default": {
+		&"normal": "button_square_depth_gradient",
+		&"hover": "button_square_depth_gloss",
+		&"pressed": "button_square_gradient",
+		&"hover_pressed": "button_square_gloss",
+		&"disabled": "button_square_line",
+	},
+	"Plain": {
+		&"normal": "button_square_depth_border",
+		&"hover": "button_square_depth_line",
+		&"pressed": "button_square_line",
+		&"hover_pressed": "button_square_border",
+		&"disabled": "button_square_line",
+	}
+}
+
+const CHECKBUTTON_STATES: Dictionary[String, String] = {
+	&"checked": "icon_outline_checkmark",
+	&"unchecked": "icon_outline_cross",
+	&"checked_disabled": "icon_checkmark",
+	&"unchecked_disabled": "icon_cross",
+	&"checked_mirrored": "icon_outline_checkmark",
+	&"unchecked_mirrored": "icon_outline_cross",
+	&"checked_disabled_mirrored": "icon_checkmark",
+	&"unchecked_disabled_mirrored": "icon_cross",
+}
+
+const CHECKBOX_STATES: Dictionary[String, String] = {
+	&"checked": "check_square_color_checkmark",
+	&"unchecked": "check_square_color",
+	&"checked_disabled": "check_square_grey_checkmark",
+	&"unchecked_disabled": "check_square_grey",
+	&"radio_checked": "check_round_round_circle",
+	&"radio_unchecked": "check_round_color",
+	&"radio_checked_disabled": "check_round_grey_circle",
+	&"radio_unchecked_disabled": "check_round_grey",
+}
+
+const SLIDER_SPRITES: Dictionary[String, String] = {
+	&"grabber": "icon_circle",
+	&"grabber_disabled": "icon_outline_square",
+	&"grabber_highlight": "icon_outline_circle",
+	&"tick": "slide_horizontal_color_section",
+}
+
+const HSLIDER_STYLEBOX_TEXTURE: Dictionary[String, String] = {
+	&"grabber_area": "slide_horizontal_color",
+	&"grabber_area_highlight": "slide_horizontal_color",
+	&"slider": "slide_horizontal_grey",
+}
+
+const VSLIDER_STYLEBOX_TEXTURE: Dictionary[String, String] = {
+	&"grabber_area": "slide_vertical_color",
+	&"grabber_area_highlight": "slide_vertical_color",
+	&"slider": "slide_vertical_grey",
+}
+
+const LINE_EDIT_STYLES: Dictionary[String, String] = {
+	&"normal": "input_square",
+	&"focus": "input_outline_square",
+	&"read_only": "input_square"
+}
+
+const TAB_CONTAINER_STYLES: Dictionary[String, String] = {
+	&"panel": "button_square_line",
+	&"tab_selected": "button_square_flat",
+	&"tab_hovered": "button_square_gloss",
+	&"tab_unselected": "button_square_gradient",
+	&"tab_disabled": "button_square_line",
+}
+
+const PROGRESS_BAR_BG := "button_square_line"
+const PROGRESS_BAR_FILL := "button_square_depth_gloss"
+
+const TREE_AND_ITEM_LIST_SHARE_STYLE: Dictionary[String, String] = {
+	panel = "button_square_line",
+	hovered = "button_square_gloss",
+	selected = "button_square_flat",
+	selected_focus = "button_square_flat",
+}
+
+const TREE_IMAGES: Dictionary[String, String] = {
+	checked = "check_square_color_checkmark",
+	unchecked_disabled = "check_square_grey",
+	unchecked = "check_square_color",
+	checked_disabled = "check_square_grey_checkmark",
+}
+
 func setup() -> void:
-	set_save_path("res://themes/main_theme.tres")
+	set_save_path(THEME_FILE_PATH)
 
 func define_theme() -> void:
-	#define_default_font(ResourceLoader.load(DEFAULT_FONT))
-	
-	var panel_style_box = stylebox_texture({
-		texture = ResourceLoader.load(PANEL_BG),
-		texture_margin_left = 6,
-		texture_margin_top = 6,
-		texture_margin_right = 6,
-		texture_margin_bottom = 10
-	})
-	
-	var no_outline_style_box = stylebox_empty({
-		texture_margin_left = 10,
-		texture_margin_top = 6,
-		texture_margin_right = 10,
-		texture_margin_bottom = 10
-	})
-	
-	define_style("PanelContainer", {
-		panel = panel_style_box
-	})
-	
-	define_style("Panel", {
-		panel = panel_style_box
-	})
-	
-	define_style("Label", {
-		font_color = FONT_COLOR
-	})
-	
-	define_style("RichTextLabel", {
-		default_color = FONT_COLOR
-	})
-	
 	define_style("MarginContainer", {
-		margin_left = MARGIN,
 		margin_top = MARGIN,
 		margin_right = MARGIN,
 		margin_bottom = MARGIN,
+		margin_left = MARGIN
 	})
 	
-	define_style("BoxContainer", {
-		separation = MARGIN
+	define_style("Label", {
+		font_color = FONT_COLOR,
+		font_outline_color = FONT_COLOR_OUTLINE
 	})
 	
-	var button_close_style_box = stylebox_texture({
-		texture = ResourceLoader.load(CLOSE_BUTTON_BG),
-		texture_margin_left = 6,
-		texture_margin_top = 6,
-		texture_margin_right = 6,
-		texture_margin_bottom = 6
-	})
-	
-	var button_close_hover_style_box = stylebox_texture(inherit(button_close_style_box, {
-		texture = ResourceLoader.load(CLOSE_BUTTON_HOVER_BG)
-	}))
-	
-	var button_close_pressed_style_box = stylebox_texture(inherit(button_close_style_box, {
-		texture = ResourceLoader.load(CLOSE_BUTTON_PRESSED_BG)
-	}))
-	
-	define_variant_style("ButtonClose", "Button", {
-		icon = ResourceLoader.load(CLOSE_BUTTON_ICON),
-		normal = button_close_style_box,
-		hover = button_close_hover_style_box,
-		pressed = button_close_pressed_style_box
-	})
-	
-	#region Inputs
-	var input_style_box = stylebox_texture({
-		texture = ResourceLoader.load(INPUT_BG),
-		texture_margin_left = 10,
-		texture_margin_top = 10,
-		texture_margin_right = 10,
-		texture_margin_bottom = 10
-	})
+	define_panels()
+	define_buttons()
+	define_line_edit()
+	define_sliders()
+	define_tab_container()
+	define_progress_bar()
+	define_tree_and_item_list()
 
-	var input_focus_style_box = stylebox_texture(inherit(input_style_box, {
-		texture = ResourceLoader.load(INPUT_FOCUS_BG)
-	}))
-	
-	define_style("LineEdit", {
+func define_panels() -> void:
+	for color in TYPE_COLORS:
+		for panel_style in PANEL_STYLES:
+			var panel_stylebox = stylebox_texture(inherit(
+				{texture = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+					TYPE_COLORS[color], PANEL_STYLES[panel_style]
+				])},
+				texture_margins(8, 10, 8, 10)
+			))
+			if color == "Default" and panel_style == "Depth":
+				define_style("Panel", {
+					panel = panel_stylebox
+				})
+				define_style("PanelContainer", {
+					panel = panel_stylebox
+				})
+			else:
+				var variant_style_name = "PanelContainer%s%s" % [
+					color,
+					panel_style if panel_style != "Depth" else "",
+				]
+				define_variant_style(variant_style_name, "PanelContainer", {
+					panel = panel_stylebox
+				})
+				variant_style_name = "Panel%s%s" % [
+					color,
+					panel_style if panel_style != "Depth" else "",
+				]
+				define_variant_style(variant_style_name, "Panel", {
+					panel = panel_stylebox
+				})
+
+func define_buttons() -> void:
+	for button_type in TYPE_COLORS:
+		# Base Button
+		for variant in BUTTON_VARIANTS:
+			var button_state_styleboxes = {
+					focus = stylebox_empty({}),
+					font_color = FONT_COLOR,
+					font_pressed_color = FONT_COLOR,
+					font_hover_color = FONT_COLOR,
+					font_hover_pressed_color = FONT_COLOR,
+					font_focus_color = FONT_COLOR,
+					font_disabled_color = FONT_UNEDITABLE_COLOR,
+					icon_normal_color = FONT_COLOR,
+					icon_pressed_color = FONT_COLOR,
+					icon_hover_color = FONT_COLOR,
+					icon_hover_pressed_color = FONT_COLOR,
+					icon_focus_color = FONT_COLOR,
+					icon_disabled_color = FONT_UNEDITABLE_COLOR
+				}
+			for button_state in BUTTON_VARIANTS[variant]:
+				var button_texture = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+					TYPE_COLORS[button_type],
+					BUTTON_VARIANTS[variant][button_state]
+				])
+				if button_state in [&"pressed", &"hover_pressed", &"disabled"]:
+					button_state_styleboxes[button_state] = stylebox_texture(inherit(
+						button_state_styleboxes,
+						{texture = button_texture},
+						texture_margins(16, 10, 16, 10)
+					))
+				else:
+					button_state_styleboxes[button_state] = stylebox_texture(inherit(
+						button_state_styleboxes,
+						{texture = button_texture},
+						texture_margins(16, 8, 16, 12)
+					))
+			if button_type == "Default" and variant == "Default":
+				define_style("Button", button_state_styleboxes)
+			else:
+				var variant_style_name = "Button%s%s" % [
+					button_type if button_type != "Default" else "",
+					variant if variant != "Default" else ""
+				]
+				define_variant_style(variant_style_name, "Button", button_state_styleboxes)
+		# CheckBox
+		var checkbox_state_styleboxes = {
+			normal = stylebox_empty({}),
+			hover = stylebox_empty({}),
+			pressed = stylebox_empty({}),
+			hover_pressed = stylebox_empty({}),
+			disabled = stylebox_empty({}),
+		}
+		for checkbox_state in CHECKBOX_STATES:
+			checkbox_state_styleboxes[checkbox_state] = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+					TYPE_COLORS[button_type],
+					CHECKBOX_STATES[checkbox_state]
+				])
+		if button_type == "Default":
+			define_style("CheckBox", checkbox_state_styleboxes)
+		else:
+			var variant_style_name = "CheckBox%s" % [
+					button_type if button_type != "Default" else "",
+				]
+			define_variant_style(variant_style_name, "CheckBox", checkbox_state_styleboxes)
+
+		# CheckButton
+		var checkbutton_state_styleboxes = {
+			normal = stylebox_empty({}),
+			hover = stylebox_empty({}),
+			pressed = stylebox_empty({}),
+			hover_pressed = stylebox_empty({}),
+			disabled = stylebox_empty({}),
+		}
+		for checkbutton_state in CHECKBUTTON_STATES:
+			checkbutton_state_styleboxes[checkbutton_state] = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+					TYPE_COLORS[button_type],
+					CHECKBUTTON_STATES[checkbutton_state]
+				])
+		if button_type == "Default":
+			define_style("CheckButton", checkbutton_state_styleboxes)
+		else:
+			var variant_style_name = "CheckButton%s" % [
+					button_type if button_type != "Default" else "",
+				]
+			define_variant_style(variant_style_name, "CheckButton", checkbutton_state_styleboxes)
+
+func define_line_edit() -> void:
+	var line_edit_styles = {
 		font_color = FONT_COLOR,
 		font_uneditable_color = FONT_UNEDITABLE_COLOR,
 		font_placeholder_color = FONT_PLACEHOLDER_COLOR,
 		caret_color = FONT_COLOR,
-		normal = input_style_box,
-		focus = input_focus_style_box,
-		read_only = input_style_box
-	})
-	
-	define_style("TextEdit", {
-		font_color = FONT_COLOR,
-		caret_color = FONT_COLOR,
-		normal = input_style_box,
-		focus = input_focus_style_box,
-		read_only = input_style_box
-	})
-
-	define_style("CodeEdit", {
-		current_line_color = Color("#cccc"),
-		line_number_color = FONT_COLOR,
-		font_readonly_color = FONT_UNEDITABLE_COLOR
-	})
-	#endregion
-	
-	#region Button
-	var button_style_box = stylebox_texture({
-		texture = ResourceLoader.load(BUTTON_BG),
-		texture_margin_left = 10,
-		texture_margin_top = 6,
-		texture_margin_right = 10,
-		texture_margin_bottom = 10
-	})
-	
-	var button_hover_style_box = stylebox_texture(inherit(button_style_box, {
-		texture = ResourceLoader.load(BUTTON_HOVER_BG)
-	}))
-	
-	var button_pressed_style_box = stylebox_texture(inherit(button_style_box, {
-		texture = ResourceLoader.load(BUTTON_PRESSED_BG)
-	}))
-	
-	var button_hover_pressed_style_box = stylebox_texture(inherit(button_style_box, {
-		texture = ResourceLoader.load(BUTTON_HOVER_PRESSED_BG)
-	}))
-	
-	var button_disabled_style_box = stylebox_texture(inherit(button_style_box, {
-		texture = ResourceLoader.load(BUTTON_DISABLED_BG)
-	}))
-	
-	define_style("Button", {
-		font_color = BUTTON_FONT_COLOR,
-		font_hover_color = BUTTON_FONT_COLOR,
-		font_pressed_color = BUTTON_FONT_COLOR,
-		font_hover_pressed_color = BUTTON_FONT_COLOR,
-		font_focus_color = BUTTON_FONT_COLOR,
-		font_disabled_color = FONT_COLOR,
-		normal = button_style_box,
-		hover = button_hover_style_box,
-		pressed = button_pressed_style_box,
-		hover_pressed = button_hover_pressed_style_box,
-		disabled = button_disabled_style_box,
-		focus = no_outline_style_box
-	})
-	#endregion End of Button
-	
-	#region Checkbox
-	define_style("CheckBox", {
-		checked = ResourceLoader.load(CHECKBOX_CHECKED),
-		checked_disabled = ResourceLoader.load(CHECKBOX_CHECKED_DISABLED),
-		unchecked = ResourceLoader.load(CHECKBOX_UNCHECKED),
-		unchecked_disabled = ResourceLoader.load(CHECKBOX_UNCHECKED_DISABLED),
-		radio_checked = ResourceLoader.load(RADIO_CHECKED),
-		radio_checked_disabled = ResourceLoader.load(RADIO_CHECKED_DISABLED),
-		radio_unchecked = ResourceLoader.load(RADIO_UNCHECKED),
-		radio_unchecked_disabled = ResourceLoader.load(RADIO_UNCHECKED_DISABLED),
-		normal = stylebox_empty({}),
-		hover = stylebox_empty({}),
-		pressed = stylebox_empty({}),
-		hover_pressed = stylebox_empty({}),
-		disabled = stylebox_empty({}),
-		focus = no_outline_style_box,
-		font_color = FONT_COLOR,
-		font_hover_color = FONT_COLOR,
-		font_pressed_color = FONT_COLOR,
-		font_hover_pressed_color = FONT_COLOR,
-		font_focus_color = FONT_COLOR,
-	})
-	#endregion
-	
-	#region Tab Container
-	var tab_panel_style_box = stylebox_texture({
-		texture = ResourceLoader.load(TAB_PANEL_BG),
-		texture_margin_left = 6,
-		texture_margin_top = 6,
-		texture_margin_right = 6,
-		texture_margin_bottom = 10
-	})
-	
-	var tab_unselected_style_box = stylebox_texture({
-		texture = ResourceLoader.load(TAB_UNSELECTED_BG),
-		texture_margin_left = 12,
-		texture_margin_top = 6,
-		texture_margin_right = 12,
-		texture_margin_bottom = 10
-	})
-	
-	var tab_selected_style_box = stylebox_texture(inherit(tab_unselected_style_box, {
-		texture = ResourceLoader.load(TAB_SELECTED_BG)
-	}))
-	
-	var tab_hovered_style_box = stylebox_texture(inherit(tab_unselected_style_box, {
-		texture = ResourceLoader.load(TAB_HOVER_BG)
-	}))
-	
-	var tab_disabled_style_box = stylebox_texture(inherit(tab_unselected_style_box, {
-		texture = ResourceLoader.load(TAB_DISABLED_BG)
-	}))
-	
-	define_style("TabContainer", {
-		panel = tab_panel_style_box,
-		tab_selected = tab_selected_style_box,
-		tab_hovered = tab_hovered_style_box,
-		tab_unselected = tab_unselected_style_box,
-		tab_disabled = tab_disabled_style_box,
-		tab_focus = no_outline_style_box,
-		font_unselected_color = FONT_COLOR,
-		font_hovered_color = FONT_COLOR,
-		font_disabled_color = FONT_UNEDITABLE_COLOR
-	})
-	#endregion End of Tab Container
-	
-	#region Tree and ItemList
-	var tree_panel_style_box = stylebox_texture({
-		texture = ResourceLoader.load(TREE_PANEL_BG),
-		texture_margin_left = 12,
-		texture_margin_top = 12,
-		texture_margin_right = 12,
-		texture_margin_bottom = 12
-	})
-	
-	var tree_selected_style_box = stylebox_texture({
-		texture = ResourceLoader.load(TREE_SELECTED_BG),
-		texture_margin_left = 12,
-		texture_margin_top = 6,
-		texture_margin_right = 12,
-		texture_margin_bottom = 10
-	})
-	
-	var tree_hovered_style_box = stylebox_texture(inherit(tree_selected_style_box, {
-		texture = ResourceLoader.load(TREE_HOVER_BG)
-	}))
-	
-	define_style("Tree", {
-		panel = tree_panel_style_box,
-		arrow = ResourceLoader.load(TREE_ICON_EXPAND),
-		arrow_collapsed = ResourceLoader.load(TREE_ICON_COLLAPSE),
-		arrow_collapsed_mirrored = ResourceLoader.load(TREE_ICON_COLLAPSE),
-		unchecked = ResourceLoader.load(TREE_CHECKBOX_UNCHECKED),
-		unchecked_disabled = ResourceLoader.load(TREE_CHECKBOX_UNCHECKED_DISABLED),
-		checked = ResourceLoader.load(TREE_CHECKBOX_CHECKED),
-		checked_disabled = ResourceLoader.load(TREE_CHECKBOX_CHECKED_DISABLED),
-		icon_max_width = 24,
-		font_color = FONT_COLOR,
-		font_hovered_color = FONT_COLOR.lightened(0.2),
-		font_selected_color = FONT_COLOR.darkened(0.5),
-		hovered = tree_hovered_style_box,
-		selected = tree_selected_style_box,
-		focus = no_outline_style_box,
-		selected_focus = tree_selected_style_box,
-		inner_item_margin_top = 8,
-		inner_item_margin_right = 8,
-		inner_item_margin_left = 8,
-		inner_item_margin_bottom = 8,
-		button_hover = tree_hovered_style_box,
-	})
-	
-	define_style("ItemList", {
-		panel = tree_panel_style_box,
-		font_color = FONT_COLOR,
-		font_hovered_color = FONT_COLOR.lightened(0.2),
-		font_selected_color = FONT_COLOR.darkened(0.5),
-		hovered = tree_hovered_style_box,
-		selected = tree_selected_style_box,
-		focus = no_outline_style_box,
-		selected_focus = tree_selected_style_box,
-	})
-	#endregion
-	
-	#region ProgressBar
-	var progress_bar_background_style_box = stylebox_texture(inherit(
-		{texture = ResourceLoader.load(PROGRESS_BAR_BG)},
-		texture_margins(8, 8, 8, 8)
-	))
-	
-	var progress_bar_fill_style_box = stylebox_texture(inherit(progress_bar_background_style_box, {
-		texture = ResourceLoader.load(PROGRESS_BAR_FILL)
-	}))
-	
-	define_style("ProgressBar", {
-		background = progress_bar_background_style_box,
-		fill = progress_bar_fill_style_box
-	})
-	#endregion
-	
-	#region ScrollBar
-	var scrollbar_scroll_style_box = stylebox_texture(inherit(
-		{texture = ResourceLoader.load(SCROLL_BAR_BG)},
-		texture_margins(8),
-	))
-	
-	var scrollbar_grabber_style_box = stylebox_texture(inherit(scrollbar_scroll_style_box, {
-		texture = ResourceLoader.load(SCROLL_BAR_GRABBER)
-	}))
-	
-	var scrollbar_grabber_highlight_style_box = stylebox_texture(inherit(scrollbar_scroll_style_box, {
-		texture = ResourceLoader.load(SCROLL_BAR_GRABBER_HIGHLIGHT)
-	}))
-	
-	var scrollbar_style = {
-		scroll = scrollbar_scroll_style_box,
-		grabber = scrollbar_grabber_style_box,
-		grabber_highlight = scrollbar_grabber_highlight_style_box,
-		grabber_pressed = scrollbar_grabber_style_box
 	}
-	
-	define_style("VScrollBar", scrollbar_style)
-	define_style("HScrollBar", scrollbar_style)
-	#endregion
-	
-	#region GREYHACK SAVE VIEWIER Specified
-	var msg_send_panel_style_box = stylebox_texture({
-		texture = ResourceLoader.load(PANEL_GREEN_BG),
-		texture_margin_left = 6,
-		texture_margin_top = 6,
-		texture_margin_right = 6,
-		texture_margin_bottom = 10
-	})
-	
-	define_variant_style("MessageOutgoing", "PanelContainer", {
-		panel = msg_send_panel_style_box
-	})
-	#endregion
+	var text_edit_styles = line_edit_styles.duplicate()
+	for style in LINE_EDIT_STYLES:
+		line_edit_styles[style] = stylebox_texture(inherit(
+			{texture = ResourceLoader.load(UI_PACK_EXTRA_PATH % [LINE_EDIT_STYLES[style]])},
+			texture_margins(8)
+		))
+	define_style("LineEdit", line_edit_styles)
+	text_edit_styles.erase(&"font_uneditable_color")
+	define_style("TextEdit", line_edit_styles)
+
+func define_sliders() -> void:
+	for color in TYPE_COLORS:
+		var slider_style = {}
+		for sprite in SLIDER_SPRITES:
+			slider_style[sprite] = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+				TYPE_COLORS[color],
+				SLIDER_SPRITES[sprite]
+			])
+		for texture in HSLIDER_STYLEBOX_TEXTURE:
+			slider_style[texture] = stylebox_texture(inherit(
+				{texture = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+					TYPE_COLORS[color],
+					HSLIDER_STYLEBOX_TEXTURE[texture]
+				])},
+				texture_margins(16, 8),
+				expand_margins(0, 0, 8, 0) if texture.begins_with("grabber") else {}
+			))
+		if color == "Default":
+			define_style("HSlider", slider_style)
+		else:
+			var variant_style_name = "HSlider%s" % [color]
+			define_variant_style(variant_style_name, "HSlider", slider_style)
+		slider_style = slider_style.duplicate(true)
+		for sprite in SLIDER_SPRITES:
+			slider_style[sprite] = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+				TYPE_COLORS[color],
+				SLIDER_SPRITES[sprite]
+			])
+		for texture in VSLIDER_STYLEBOX_TEXTURE:
+			slider_style[texture] = stylebox_texture(inherit(
+				{texture = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+					TYPE_COLORS[color],
+					VSLIDER_STYLEBOX_TEXTURE[texture]
+				])},
+				texture_margins(8, 16),
+				expand_margins(0, 8, 0, 0) if texture.begins_with("grabber") else {}
+			))
+		if color == "Default":
+			define_style("VSlider", slider_style)
+		else:
+			var variant_style_name = "VSlider%s" % [color]
+			define_variant_style(variant_style_name, "VSlider", slider_style)
+
+func define_tab_container() -> void:
+	for color in TYPE_COLORS:
+		var tab_container_style = {
+			font_selected_color = FONT_COLOR,
+			font_unselected_color = FONT_COLOR,
+			font_hovered_color = FONT_COLOR,
+			font_disabled_color = FONT_UNEDITABLE_COLOR,
+			tab_focus = stylebox_empty({})
+		}
+		for style in TAB_CONTAINER_STYLES:
+			tab_container_style[style] = stylebox_texture(inherit(
+				{texture = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+					TYPE_COLORS[color], TAB_CONTAINER_STYLES[style]
+				])},
+				texture_margins(10, 8) if style != "panel" else texture_margins(8)
+			))
+		if color == "Default":
+			define_style("TabContainer", tab_container_style)
+		else:
+			var variant_style_name = "TabContainer%s" % [color]
+			define_variant_style(variant_style_name, "TabContainer", tab_container_style)
+
+func define_progress_bar() -> void:
+	for color in TYPE_COLORS:
+		var progress_bar_style = {
+			background = stylebox_texture(inherit(
+				{texture = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+					TYPE_COLORS[color], PROGRESS_BAR_BG
+				])},
+				texture_margins(10)
+			)),
+			fill = stylebox_texture(inherit(
+				{texture = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+					TYPE_COLORS[color], PROGRESS_BAR_FILL
+				])},
+				texture_margins(4)
+			)),
+			font_color = FONT_COLOR
+		}
+		if color == "Default":
+			define_style("ProgressBar", progress_bar_style)
+		else:
+			var variant_style_name = "ProgressBar%s" % [color]
+			define_variant_style(variant_style_name, "ProgressBar", progress_bar_style)
+
+func define_tree_and_item_list() -> void:
+	for color in TYPE_COLORS:
+		var tree_style = {
+			font_color = FONT_COLOR,
+			font_hovered_color = FONT_COLOR.lightened(0.2),
+			font_selected_color = FONT_COLOR.darkened(0.5),
+			focus = stylebox_empty({})
+		}
+		var item_list_style = tree_style.duplicate(true)
+		for shared_style in TREE_AND_ITEM_LIST_SHARE_STYLE:
+			tree_style[shared_style] = stylebox_texture(inherit(
+				{texture = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+					TYPE_COLORS[color], TREE_AND_ITEM_LIST_SHARE_STYLE[shared_style]
+				])},
+				texture_margins(8)
+			))
+		for image in TREE_IMAGES:
+			tree_style[image] = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+				TYPE_COLORS[color], TREE_IMAGES[image]
+			])
+		tree_style = inherit(tree_style, {
+			inner_item_margin_top = 8,
+			inner_item_margin_right = 8,
+			inner_item_margin_left = 8,
+			inner_item_margin_bottom = 8,
+		})
+		if color == "Default":
+			define_style("Tree", tree_style)
+			define_style("ItemList", item_list_style)

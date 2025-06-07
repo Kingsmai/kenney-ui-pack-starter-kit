@@ -11,7 +11,8 @@ config_version=5
 [application]
 
 config/name="Kenney UI Pack Starter Kit"
-run/main_scene="uid://pulyfyaj5pyk"
+config/version="1.0.0.0"
+run/main_scene="uid://bm28ydp2g2uyu"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -21,8 +22,10 @@ project/assembly_name="Kenney UI Pack Starter Kit"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/theme_gen_save_sync/plugin.cfg")
+enabled=PackedStringArray("res://addons/SmoothScroll/plugin.cfg", "res://addons/theme_gen_save_sync/plugin.cfg")
 
-[gui]
+[maaacks_game_template]
 
-theme/custom="uid://bj1qmait3dk0"
+disable_update_check=false
+disable_install_wizard=true
+copy_path="res://"
