@@ -43,12 +43,12 @@ tab_focus_mode = 0
 
 [node name="Tab 1" type="Control" parent="HboxContainer/PrimaryTabContainer"]
 layout_mode = 2
-metadata/_tab_index = 1
+metadata/_tab_index = 0
 
 [node name="Tab 2" type="Control" parent="HboxContainer/PrimaryTabContainer"]
 visible = false
 layout_mode = 2
-metadata/_tab_index = 2
+metadata/_tab_index = 1
 
 [node name="Tab 3" type="Control" parent="HboxContainer/PrimaryTabContainer"]
 visible = false
@@ -65,12 +65,12 @@ tab_focus_mode = 0
 
 [node name="Tab 1" type="Control" parent="HboxContainer/SuccessTabContainer"]
 layout_mode = 2
-metadata/_tab_index = 1
+metadata/_tab_index = 0
 
 [node name="Tab 2" type="Control" parent="HboxContainer/SuccessTabContainer"]
 visible = false
 layout_mode = 2
-metadata/_tab_index = 2
+metadata/_tab_index = 1
 
 [node name="Tab 3" type="Control" parent="HboxContainer/SuccessTabContainer"]
 visible = false
@@ -87,12 +87,12 @@ tab_focus_mode = 0
 
 [node name="Tab 1" type="Control" parent="HboxContainer/WarningTabContainer"]
 layout_mode = 2
-metadata/_tab_index = 1
+metadata/_tab_index = 0
 
 [node name="Tab 2" type="Control" parent="HboxContainer/WarningTabContainer"]
 visible = false
 layout_mode = 2
-metadata/_tab_index = 2
+metadata/_tab_index = 1
 
 [node name="Tab 3" type="Control" parent="HboxContainer/WarningTabContainer"]
 visible = false
@@ -109,12 +109,12 @@ tab_focus_mode = 0
 
 [node name="Tab 1" type="Control" parent="HboxContainer/DangerTabContainer"]
 layout_mode = 2
-metadata/_tab_index = 1
+metadata/_tab_index = 0
 
 [node name="Tab 2" type="Control" parent="HboxContainer/DangerTabContainer"]
 visible = false
 layout_mode = 2
-metadata/_tab_index = 2
+metadata/_tab_index = 1
 
 [node name="Tab 3" type="Control" parent="HboxContainer/DangerTabContainer"]
 visible = false

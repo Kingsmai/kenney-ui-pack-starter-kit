@@ -16,13 +16,21 @@ run/main_scene="uid://bm28ydp2g2uyu"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/subwindows/embed_subwindows=false
+
 [dotnet]
 
 project/assembly_name="Kenney UI Pack Starter Kit"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/SmoothScroll/plugin.cfg", "res://addons/theme_gen_save_sync/plugin.cfg")
+enabled=PackedStringArray("res://addons/theme_gen_save_sync/plugin.cfg")
+
+[gui]
+
+theme/custom="uid://bj1qmait3dk0"
 
 [maaacks_game_template]
 

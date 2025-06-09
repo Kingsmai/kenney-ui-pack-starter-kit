@@ -1,0 +1,189 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3cfde1lhdl8f"]
+
+[ext_resource type="FontFile" uid="uid://cd640u5ba8et4" path="res://assets/Kenney Future.ttf" id="1_bw38l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b25sr"]
+font = ExtResource("1_bw38l")
+font_size = 36
+font_color = Color(0.2, 0.2, 0.2, 1)
+
+[node name="BannerWindow" type="Window"]
+initial_position = 2
+size = Vector2i(800, 250)
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="English" type="MarginContainer" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/English"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/English/VBoxContainer"]
+layout_mode = 2
+text = "Kenney's UI Pack Starter Kit"
+label_settings = SubResource("LabelSettings_b25sr")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/English/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="PanelContainer" parent="TabContainer/English/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelPrimary"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/English/VBoxContainer/HBoxContainer/Panel"]
+layout_mode = 2
+
+[node name="Panel" type="PanelContainer" parent="TabContainer/English/VBoxContainer/HBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"PanelDefaultFlat"
+
+[node name="Label" type="Label" parent="TabContainer/English/VBoxContainer/HBoxContainer/Panel/VBoxContainer/Panel"]
+layout_mode = 2
+text = "Would you like to gave us a star?"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/English/VBoxContainer/HBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="TabContainer/English/VBoxContainer/HBoxContainer/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonPrimaryPlain"
+text = "Sure!"
+
+[node name="Button2" type="Button" parent="TabContainer/English/VBoxContainer/HBoxContainer/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonDanger"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Why Not?"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/English/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Label" type="Label" parent="TabContainer/English/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Development Progress"
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/English/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"ProgressBarSuccess"
+value = 90.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/English/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/English/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxPrimary"
+button_pressed = true
+text = "Fully Customizable!"
+
+[node name="CheckBox2" type="CheckBox" parent="TabContainer/English/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxPrimary"
+button_pressed = true
+text = "Open Source"
+
+[node name="CheckBox3" type="CheckButton" parent="TabContainer/English/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"CheckButtonDanger"
+text = "Paid"
+
+[node name="中文" type="MarginContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/中文"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/中文/VBoxContainer"]
+layout_mode = 2
+text = "Kenney's UI Pack Starter Kit"
+label_settings = SubResource("LabelSettings_b25sr")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/中文/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="PanelContainer" parent="TabContainer/中文/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelPrimary"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/中文/VBoxContainer/HBoxContainer/Panel"]
+layout_mode = 2
+
+[node name="Panel" type="PanelContainer" parent="TabContainer/中文/VBoxContainer/HBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"PanelDefaultFlat"
+
+[node name="Label" type="Label" parent="TabContainer/中文/VBoxContainer/HBoxContainer/Panel/VBoxContainer/Panel"]
+layout_mode = 2
+text = "可以给此项目一颗星星吗？"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/中文/VBoxContainer/HBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="TabContainer/中文/VBoxContainer/HBoxContainer/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonPrimaryPlain"
+text = "好啊！"
+
+[node name="Button2" type="Button" parent="TabContainer/中文/VBoxContainer/HBoxContainer/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonDanger"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "嗯嗯可以！"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/中文/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Label" type="Label" parent="TabContainer/中文/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "开发进度"
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/中文/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"ProgressBarSuccess"
+value = 90.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/中文/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/中文/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxPrimary"
+button_pressed = true
+text = "完全可自定义"
+
+[node name="CheckBox2" type="CheckBox" parent="TabContainer/中文/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CheckBoxPrimary"
+button_pressed = true
+text = "开源"
+
+[node name="CheckBox3" type="CheckButton" parent="TabContainer/中文/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"CheckButtonDanger"
+text = "付费"
