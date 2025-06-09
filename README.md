@@ -1,80 +1,106 @@
-# 🎨 Kenney UI-Pack Starter Kit for Godot
+# Kenney UI-Pack Starter Kit for Godot 4
 
-这是一个基于 **Kenney's UI Pack** 实现的 Godot 用户界面主题项目，采用了全程编程式的方式自定义样式，适用于构建统一且美观的 UI 系统。
+![Project Banner](./docs/banner_image.png)
 
----
-
-## 🧰 如何集成到你的项目？
-
-你可以轻松地将本 Starter Kit 应用于你现有的 Godot 项目：
-
-1. 将本项目中的 `themes/` 文件夹复制到你的项目中
-2. 在 Godot 的 **AssetLib** 中搜索并安装插件 **[ThemeGen](https://godotengine.org/asset-library/asset/ThemeGen)**
-3. 打开 **Project > Project Settings > Plugins**，启用插件：`theme_gen_save_sync`
-4. 设置项目默认主题：
-
-```plaintext
-gui/theme/custom = res://themes/main_theme.tres
-```
+This is a user interface theme for Godot 4, built using the [Kenney UI Pack](https://www.kenney.nl/assets/ui-pack). It leverages the [ThemeGen](https://godotengine.org/asset-library/asset/3299) plugin for fully code-driven styling. Ideal for creating a consistent and visually appealing UI system in your project.
 
 ---
 
-## 🧱 支持的 UI 控件
+## 🔧 How to Integrate into Your Project
 
-> 当前示例主题采用蓝色为主色调，视觉统一、现代感强。
+Getting started with this starter kit is simple:
 
-已支持以下常见 UI 控件（包含默认样式及交互状态），在 6 月 7 日的更新后支持几乎所有的主流控件：
+1. Copy the `themes/` folder from this project into your own Godot 4 project.
+2. Choose one of the following integration approaches based on your needs:
 
-* [x] `Panel`
-* [x] `PanelContainer`
-* [x] `MarginContainer`
-* [x] `Label`
-* [x] `RichTextLabel`
-* [x] `BoxContainer`
-* [x] 输入类组件：
+   ### ✅ **Using Prebuilt Theme Only**
 
-  * [x] `LineEdit`
-  * [x] `TextEdit`
-  * [x] `CodeEdit`
-* [x] `Button`
+   * Delete the `themes/main_theme.gd` file and keep only `main_theme.tres`.
+   * *(Optional)* Set `res://themes/main_theme.tres` as the default theme in your project settings.
 
-  * [x] 主按钮 Primary（蓝色主题）
-  * [x] 次按钮 Secondary（可扩展）
-  * [x] 成功按钮 Success（可扩展）
-  * [x] 警告按钮 Warning（可扩展）
-  * [x] 危险按钮 Danger（可扩展）
-* [x] `CheckBox` & `RadioButton`
-* [x] `TabContainer`
-* [x] `Tree`
-* [x] `ItemList`
-* [x] `ProgressBar`
-* [x] `ScrollBar`
+   ### 🛠️ **Customizing Theme with Code**
+
+   1. Install the [ThemeGen](https://godotengine.org/asset-library/asset/3299) plugin from the Godot **AssetLib**.
+   2. Enable the plugin via `Project > Project Settings > Plugins > theme_gen_save_sync`.
+   3. Use the `main_theme.gd` script to generate and update theme styles dynamically.
 
 ---
 
-## 🙏 特别鸣谢
+## 🧩 Supported UI Controls
 
-* 🎨 **Kenney's Assets** —— 免费、开放的高质量游戏 UI 素材： [https://kenney.nl](https://kenney.nl)
-* 🧠 **Godot Engine 团队** —— 强大且自由的开源游戏引擎
+This theme supports nearly all major UI components in Godot.
+
+### 🎨 Color-Variant Controls (5 Styles)
+
+The following components come with five style variants:
+
+* Default (Gray)
+* Primary (Blue)
+* Success (Green)
+* Warning (Yellow)
+* Danger (Red)
+
+Supported nodes:
+
+* `Panel` / `PanelContainer`
+* `Button` / `CheckBox` / `CheckButton`
+* `HSlider` / `VSlider`
+* `TabContainer`
+* `ProgressBar`
+* `Tree`
+* `ItemList`
+
+### 🧱 Other Common Controls
+
+* `LineEdit` / `TextEdit` / `CodeEdit`
+* `Label`
+* `MarginContainer`
 
 ---
 
-## 🚀 本主题已应用于以下项目
+## 🚧 Future Plans
 
-* [🔍 GreyHack 存档查看器](https://github.com/Kingsmai/greyhack-save-viewer)
+We aim to expand support for additional styles and variants:
+
+### 🎮 Kenney UI Extensions
+
+* [UI Pack - Adventure](https://www.kenney.nl/assets/ui-pack-adventure)
+* [UI Pack - SciFi](https://www.kenney.nl/assets/ui-pack-sci-fi)
+* [UI Pack (RPG Expansion)](https://www.kenney.nl/assets/ui-pack-rpg-expansion)
+
+### 🕹️ Pixel Art Variants
+
+* [UI Pack - Pixel Adventure](https://www.kenney.nl/assets/ui-pack-pixel-adventure)
+* [Pixel UI Pack](https://www.kenney.nl/assets/pixel-ui-pack)
 
 ---
 
-## 🧑‍💻 欢迎贡献项目展示！
+## 🙏 Special Thanks
 
-如果你在自己的项目中使用了本主题，非常欢迎你在 [Issues](https://github.com/your-repo/issues) 中提交项目链接，我们将乐于将其收录在本页面中 📝✨
-
----
-
-## 📜 License
-
-本项目遵循 MIT 协议开源，使用的第三方资源（如 Kenney UI 资源）遵循其各自的开源许可。
+* **Kenney.nl** — Free, high-quality game asset library: [https://kenney.nl](https://kenney.nl)
+* **Godot Engine** — Powerful, free, open-source game engine
+* **ThemeGen** — Arguably the most efficient UI styling solution for Godot
 
 ---
 
-让我们一起构建更美的 Godot 界面吧！🚀
+## ✅ Projects Using This Theme
+
+* [🔍 GreyHack Save Viewer](https://github.com/Kingsmai/greyhack-save-viewer)
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from the community:
+
+* Add support for missing controls? Feel free to open a PR.
+* Got ideas for improvement? Open an issue.
+* Your contributions matter — thank you!
+
+> **If you’re using this theme in your own project, we’d love to see it! Feel free to share a link in [Issues](https://github.com/your-repo/issues), and we’ll be happy to feature it here.**
+
+---
+
+## 📄 License
+
+This project is open-sourced under the **MIT License**. Third-party assets (such as Kenney UI resources) are licensed under their respective terms.
