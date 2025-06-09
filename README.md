@@ -2,11 +2,8 @@
 
 ![Project Banner](./docs/banner_image.png)
 
-<<<<<<< HEAD
 English | [中文](./README_zh-cn.md)
 
-=======
->>>>>>> 11fb0b939a705a806e11a68d4ce7c768c34d2bfc
 This is a user interface theme for Godot 4, built using the [Kenney UI Pack](https://www.kenney.nl/assets/ui-pack). It leverages the [ThemeGen](https://godotengine.org/asset-library/asset/3299) plugin for fully code-driven styling. Ideal for creating a consistent and visually appealing UI system in your project.
 
 ---

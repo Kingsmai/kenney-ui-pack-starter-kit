@@ -2,11 +2,8 @@
 
 ![项目标题](./docs/banner_image-zh.png)
 
-<<<<<<< HEAD
 [English](./README.md) | 中文
 
-=======
->>>>>>> 11fb0b939a705a806e11a68d4ce7c768c34d2bfc
 这是一个基于 [Kenney's UI Pack](https://www.kenney.nl/assets/ui-pack) 构建的 Godot 4 用户界面主题 Starter Kit。项目采用 [ThemeGen](https://godotengine.org/asset-library/asset/3299) 插件，支持完全编程式样式生成，适用于构建统一、现代、美观的 UI 系统。
 
 ---
