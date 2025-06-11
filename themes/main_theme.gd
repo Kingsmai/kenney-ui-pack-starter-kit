@@ -72,7 +72,8 @@ const SLIDER_SPRITES: Dictionary[String, String] = {
 	&"grabber": "icon_circle",
 	&"grabber_disabled": "icon_outline_square",
 	&"grabber_highlight": "icon_outline_circle",
-	&"tick": "slide_horizontal_color_section",
+	# It is different between horizontal and vertical
+	&"tick": "slide_%s_color_section",
 }
 
 const HSLIDER_STYLEBOX_TEXTURE: Dictionary[String, String] = {
@@ -281,10 +282,16 @@ func define_sliders() -> void:
 	for color in TYPE_COLORS:
 		var slider_style = {}
 		for sprite in SLIDER_SPRITES:
-			slider_style[sprite] = ResourceLoader.load(UI_PACK_COLOR_PATH % [
-				TYPE_COLORS[color],
-				SLIDER_SPRITES[sprite]
-			])
+			if sprite == &"tick":
+				slider_style[sprite] = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+					TYPE_COLORS[color],
+					SLIDER_SPRITES[sprite] % ["horizontal"]
+				])
+			else:
+				slider_style[sprite] = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+					TYPE_COLORS[color],
+					SLIDER_SPRITES[sprite]
+				])
 		for texture in HSLIDER_STYLEBOX_TEXTURE:
 			slider_style[texture] = stylebox_texture(inherit(
 				{texture = ResourceLoader.load(UI_PACK_COLOR_PATH % [
@@ -301,10 +308,16 @@ func define_sliders() -> void:
 			define_variant_style(variant_style_name, "HSlider", slider_style)
 		slider_style = slider_style.duplicate(true)
 		for sprite in SLIDER_SPRITES:
-			slider_style[sprite] = ResourceLoader.load(UI_PACK_COLOR_PATH % [
-				TYPE_COLORS[color],
-				SLIDER_SPRITES[sprite]
-			])
+			if sprite == &"tick":
+				slider_style[sprite] = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+					TYPE_COLORS[color],
+					SLIDER_SPRITES[sprite] % ["vertical"]
+				])
+			else:
+				slider_style[sprite] = ResourceLoader.load(UI_PACK_COLOR_PATH % [
+					TYPE_COLORS[color],
+					SLIDER_SPRITES[sprite]
+				])
 		for texture in VSLIDER_STYLEBOX_TEXTURE:
 			slider_style[texture] = stylebox_texture(inherit(
 				{texture = ResourceLoader.load(UI_PACK_COLOR_PATH % [
@@ -334,7 +347,7 @@ func define_tab_container() -> void:
 				{texture = ResourceLoader.load(UI_PACK_COLOR_PATH % [
 					TYPE_COLORS[color], TAB_CONTAINER_STYLES[style]
 				])},
-				texture_margins(10, 8) if style != "panel" else texture_margins(8)
+				texture_margins(10, 8) if style != "panel" else texture_margins(12)
 			))
 		if color == "Default":
 			define_style("TabContainer", tab_container_style)

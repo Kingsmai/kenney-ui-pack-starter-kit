@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://yxxaenninynu"]
 
 [node name="SliderExample" type="VBoxContainer"]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="SliderLabel" type="Label" parent="."]
 layout_mode = 2
@@ -151,3 +154,171 @@ size_flags_horizontal = 2
 theme_type_variation = &"VSliderDanger"
 value = 50.0
 editable = false
+
+[node name="SliderLabel2" type="Label" parent="."]
+layout_mode = 2
+text = "Sliders with Tick"
+
+[node name="SlidersWithTick" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HorizontalSliders" type="VBoxContainer" parent="SlidersWithTick"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DefaultHSlider" type="HSlider" parent="SlidersWithTick/HorizontalSliders"]
+layout_mode = 2
+value = 50.0
+tick_count = 5
+
+[node name="PrimaryHSlider" type="HSlider" parent="SlidersWithTick/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderPrimary"
+value = 50.0
+tick_count = 5
+
+[node name="SuccessHSlider" type="HSlider" parent="SlidersWithTick/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderSuccess"
+value = 50.0
+tick_count = 5
+
+[node name="WarningHSlider" type="HSlider" parent="SlidersWithTick/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderWarning"
+value = 50.0
+tick_count = 5
+
+[node name="DangerHSlider" type="HSlider" parent="SlidersWithTick/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderDanger"
+value = 50.0
+tick_count = 5
+
+[node name="VSeparator" type="VSeparator" parent="SlidersWithTick"]
+layout_mode = 2
+
+[node name="VerticalSliders" type="HBoxContainer" parent="SlidersWithTick"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DefaultVSlider" type="VSlider" parent="SlidersWithTick/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+value = 50.0
+tick_count = 5
+
+[node name="PrimaryVSlider" type="VSlider" parent="SlidersWithTick/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderPrimary"
+value = 50.0
+tick_count = 5
+
+[node name="SuccessVSlider" type="VSlider" parent="SlidersWithTick/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderSuccess"
+value = 50.0
+tick_count = 5
+
+[node name="WarningVSlider" type="VSlider" parent="SlidersWithTick/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderWarning"
+value = 50.0
+tick_count = 5
+
+[node name="DangerVSlider" type="VSlider" parent="SlidersWithTick/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderDanger"
+value = 50.0
+tick_count = 5
+
+[node name="DisabledSlidersWithTick" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HorizontalSliders" type="VBoxContainer" parent="DisabledSlidersWithTick"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DefaultHSlider" type="HSlider" parent="DisabledSlidersWithTick/HorizontalSliders"]
+layout_mode = 2
+value = 50.0
+editable = false
+tick_count = 5
+
+[node name="PrimaryHSlider" type="HSlider" parent="DisabledSlidersWithTick/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderPrimary"
+value = 50.0
+editable = false
+tick_count = 5
+
+[node name="SuccessHSlider" type="HSlider" parent="DisabledSlidersWithTick/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderSuccess"
+value = 50.0
+editable = false
+tick_count = 5
+
+[node name="WarningHSlider" type="HSlider" parent="DisabledSlidersWithTick/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderWarning"
+value = 50.0
+editable = false
+tick_count = 5
+
+[node name="DangerHSlider" type="HSlider" parent="DisabledSlidersWithTick/HorizontalSliders"]
+layout_mode = 2
+theme_type_variation = &"HSliderDanger"
+value = 50.0
+editable = false
+tick_count = 5
+
+[node name="VSeparator" type="VSeparator" parent="DisabledSlidersWithTick"]
+layout_mode = 2
+
+[node name="VerticalSliders" type="HBoxContainer" parent="DisabledSlidersWithTick"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DefaultVSlider" type="VSlider" parent="DisabledSlidersWithTick/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+value = 50.0
+editable = false
+tick_count = 5
+
+[node name="PrimaryVSlider" type="VSlider" parent="DisabledSlidersWithTick/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderPrimary"
+value = 50.0
+editable = false
+tick_count = 5
+
+[node name="SuccessVSlider" type="VSlider" parent="DisabledSlidersWithTick/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderSuccess"
+value = 50.0
+editable = false
+tick_count = 5
+
+[node name="WarningVSlider" type="VSlider" parent="DisabledSlidersWithTick/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderWarning"
+value = 50.0
+editable = false
+tick_count = 5
+
+[node name="DangerVSlider" type="VSlider" parent="DisabledSlidersWithTick/VerticalSliders"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"VSliderDanger"
+value = 50.0
+editable = false
+tick_count = 5
