@@ -1,0 +1,439 @@
+[gd_scene format=3 uid="uid://dagf3gmbkm0ru"]
+
+[node name="OptionButtonExample" type="VBoxContainer"]
+
+[node name="OptionButtonLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Option Button"
+
+[node name="OptionButtons" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="DefaultOptionButton" type="OptionButton" parent="OptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 5
+popup/item_0/text = "Default"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="PrimaryOptionButton" type="OptionButton" parent="OptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonPrimary"
+selected = 0
+item_count = 5
+popup/item_0/text = "Primary"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="SuccessOptionButton" type="OptionButton" parent="OptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonSuccess"
+selected = 0
+item_count = 5
+popup/item_0/text = "Success"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="InfoOptionButton" type="OptionButton" parent="OptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 5
+popup/item_0/text = "Info"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="WarningOptionButton" type="OptionButton" parent="OptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonWarning"
+selected = 0
+item_count = 5
+popup/item_0/text = "Warning"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="DangerOptionButton" type="OptionButton" parent="OptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonDanger"
+selected = 0
+item_count = 5
+popup/item_0/text = "Danger"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="PlainOptionButtons" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="DefaultOptionButton" type="OptionButton" parent="PlainOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonPlain"
+selected = 0
+item_count = 5
+popup/item_0/text = "Default"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="PrimaryOptionButton" type="OptionButton" parent="PlainOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonPrimaryPlain"
+selected = 0
+item_count = 5
+popup/item_0/text = "Primary"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="SuccessOptionButton" type="OptionButton" parent="PlainOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonSuccessPlain"
+selected = 0
+item_count = 5
+popup/item_0/text = "Success"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="InfoOptionButton" type="OptionButton" parent="PlainOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonPlain"
+selected = 0
+item_count = 5
+popup/item_0/text = "Info"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="WarningOptionButton" type="OptionButton" parent="PlainOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonWarningPlain"
+selected = 0
+item_count = 5
+popup/item_0/text = "Warning"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="DangerOptionButton" type="OptionButton" parent="PlainOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonDangerPlain"
+selected = 0
+item_count = 5
+popup/item_0/text = "Danger"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="DisabledOptionButtonLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Disabled Option Button"
+
+[node name="DisabledOptionButtons" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="DefaultOptionButton" type="OptionButton" parent="DisabledOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+selected = 0
+item_count = 5
+popup/item_0/text = "Default"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="PrimaryOptionButton" type="OptionButton" parent="DisabledOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonPrimary"
+disabled = true
+selected = 0
+item_count = 5
+popup/item_0/text = "Primary"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="SuccessOptionButton" type="OptionButton" parent="DisabledOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonSuccess"
+disabled = true
+selected = 0
+item_count = 5
+popup/item_0/text = "Success"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="InfoOptionButton" type="OptionButton" parent="DisabledOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+selected = 0
+item_count = 5
+popup/item_0/text = "Info"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="WarningOptionButton" type="OptionButton" parent="DisabledOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonWarning"
+disabled = true
+selected = 0
+item_count = 5
+popup/item_0/text = "Warning"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="DangerOptionButton" type="OptionButton" parent="DisabledOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonDanger"
+disabled = true
+selected = 0
+item_count = 5
+popup/item_0/text = "Danger"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="DisabledPlainOptionButtons" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="DefaultOptionButton" type="OptionButton" parent="DisabledPlainOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonPlain"
+disabled = true
+selected = 0
+item_count = 5
+popup/item_0/text = "Default"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="PrimaryOptionButton" type="OptionButton" parent="DisabledPlainOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonPrimaryPlain"
+disabled = true
+selected = 0
+item_count = 5
+popup/item_0/text = "Primary"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="SuccessOptionButton" type="OptionButton" parent="DisabledPlainOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonSuccessPlain"
+disabled = true
+selected = 0
+item_count = 5
+popup/item_0/text = "Success"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="InfoOptionButton" type="OptionButton" parent="DisabledPlainOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonPlain"
+disabled = true
+selected = 0
+item_count = 5
+popup/item_0/text = "Info"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="WarningOptionButton" type="OptionButton" parent="DisabledPlainOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonWarningPlain"
+disabled = true
+selected = 0
+item_count = 5
+popup/item_0/text = "Warning"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="DangerOptionButton" type="OptionButton" parent="DisabledPlainOptionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"OptionButtonDangerPlain"
+disabled = true
+selected = 0
+item_count = 5
+popup/item_0/text = "Danger"
+popup/item_0/id = 0
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4

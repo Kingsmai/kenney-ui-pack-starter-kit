@@ -177,7 +177,7 @@ func define_panels() -> void:
 
 func define_buttons() -> void:
 	for button_type in TYPE_COLORS:
-		# Base Button
+		# Base Button and Option Button (Since there are same state)
 		for variant in BUTTON_VARIANTS:
 			var button_state_styleboxes = {
 					focus = stylebox_empty({}),
@@ -213,12 +213,14 @@ func define_buttons() -> void:
 					))
 			if button_type == "Default" and variant == "Default":
 				define_style("Button", button_state_styleboxes)
+				define_style("OptionButton", button_state_styleboxes)
 			else:
 				var variant_style_name = "Button%s%s" % [
 					button_type if button_type != "Default" else "",
 					variant if variant != "Default" else ""
 				]
 				define_variant_style(variant_style_name, "Button", button_state_styleboxes)
+				define_variant_style("Option" + variant_style_name, "OptionButton", button_state_styleboxes)
 		# CheckBox
 		var checkbox_state_styleboxes = {
 			normal = stylebox_empty({}),
@@ -276,7 +278,7 @@ func define_line_edit() -> void:
 		))
 	define_style("LineEdit", line_edit_styles)
 	text_edit_styles.erase(&"font_uneditable_color")
-	define_style("TextEdit", line_edit_styles)
+	define_style("TextEdit", text_edit_styles)
 
 func define_sliders() -> void:
 	for color in TYPE_COLORS:

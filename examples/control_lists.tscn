@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1wj1imaweifw"]
+[gd_scene load_steps=9 format=3 uid="uid://b1wj1imaweifw"]
 
 [ext_resource type="PackedScene" uid="uid://cgt4rg5n0jnq5" path="res://examples/buttons_example.tscn" id="1_3mg3j"]
 [ext_resource type="PackedScene" uid="uid://b2vpajrq8dbn0" path="res://examples/checkbox_and_radio_example.tscn" id="2_3mg3j"]
+[ext_resource type="PackedScene" uid="uid://dagf3gmbkm0ru" path="res://examples/option_button_example.tscn" id="2_xt75s"]
 [ext_resource type="PackedScene" uid="uid://bh3svcwtqlcm5" path="res://examples/check_button_example.tscn" id="3_emqrl"]
 [ext_resource type="PackedScene" uid="uid://yxxaenninynu" path="res://examples/slider_example.tscn" id="4_13gha"]
 [ext_resource type="PackedScene" uid="uid://5wuyyms534vi" path="res://examples/input_example.tscn" id="5_42m5k"]
@@ -16,26 +17,8 @@ layout_mode = 2
 [node name="HSeparator" type="HSeparator" parent="."]
 layout_mode = 2
 
-[node name="OptionButtonExample" type="VBoxContainer" parent="."]
+[node name="OptionButtonExample" parent="." instance=ExtResource("2_xt75s")]
 layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OptionButtonExample"]
-layout_mode = 2
-
-[node name="DefaultOptionButton" type="OptionButton" parent="OptionButtonExample/HBoxContainer"]
-layout_mode = 2
-selected = 0
-item_count = 5
-popup/item_0/text = "Default"
-popup/item_0/id = 0
-popup/item_1/id = 1
-popup/item_1/separator = true
-popup/item_2/text = "Has"
-popup/item_2/id = 2
-popup/item_3/text = "Many"
-popup/item_3/id = 3
-popup/item_4/text = "Options"
-popup/item_4/id = 4
 
 [node name="HSeparator6" type="HSeparator" parent="."]
 layout_mode = 2
