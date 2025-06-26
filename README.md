@@ -88,6 +88,7 @@ We aim to expand support for additional styles and variants:
 ## ✅ Projects Using This Theme
 
 * [🔍 GreyHack Save Viewer](https://github.com/Kingsmai/greyhack-save-viewer)
+* [💽 Godot Song Manager](https://github.com/Kingsmai/godot-song-manager)
 
 ---
 

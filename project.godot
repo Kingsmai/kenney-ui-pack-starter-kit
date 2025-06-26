@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [display]
 
 window/subwindows/embed_subwindows=false
+window/per_pixel_transparency/allowed=true
 
 [dotnet]
 

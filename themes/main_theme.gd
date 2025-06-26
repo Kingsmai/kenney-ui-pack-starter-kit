@@ -270,12 +270,12 @@ func define_line_edit() -> void:
 		font_placeholder_color = FONT_PLACEHOLDER_COLOR,
 		caret_color = FONT_COLOR,
 	}
-	var text_edit_styles = line_edit_styles.duplicate()
 	for style in LINE_EDIT_STYLES:
 		line_edit_styles[style] = stylebox_texture(inherit(
 			{texture = ResourceLoader.load(UI_PACK_EXTRA_PATH % [LINE_EDIT_STYLES[style]])},
 			texture_margins(8)
 		))
+	var text_edit_styles = line_edit_styles.duplicate()
 	define_style("LineEdit", line_edit_styles)
 	text_edit_styles.erase(&"font_uneditable_color")
 	define_style("TextEdit", text_edit_styles)
@@ -394,7 +394,7 @@ func define_tree_and_item_list() -> void:
 				{texture = ResourceLoader.load(UI_PACK_COLOR_PATH % [
 					TYPE_COLORS[color], TREE_AND_ITEM_LIST_SHARE_STYLE[shared_style]
 				])},
-				texture_margins(8)
+				texture_margins(12)
 			))
 		for image in TREE_IMAGES:
 			tree_style[image] = ResourceLoader.load(UI_PACK_COLOR_PATH % [
